@@ -1,0 +1,43 @@
+.edit-delete-nowrap {
+    white-space:nowrap;
+}
+.top-buffer {
+    margin-top:20px;
+}
+.divider {
+    border-left:1px solid gray;
+}
+a:link {
+    color:#7BC5E3;
+}
+a:visited {
+    color:#7BC5E3;
+}
+.cancel-link:link {
+    font-color:#FA9191;
+}
+.cancel-link:visited {
+    color:#FA9191;
+}
+.menu-link {
+    font-color:#91D3E6;
+}
+.container .jumbotron {
+    border-radius: 0px;
+    padding:40px;
+    background-color:;
+}
+.restaurant-jumbo:hover {
+    cursor:pointer;
+    background-color:#CFFA9B;
+}
+#restaurant-name {
+    font-size:27px;
+}
+.profile-pic {
+     width:80px;
+     height:80px;
+     border-radius:40px;
+     -webkit-border-radius:40px;
+     -moz-border-radius:40px;
+}

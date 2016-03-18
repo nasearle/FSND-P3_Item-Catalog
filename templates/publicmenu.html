@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Welcome to {{restaurant.name}}</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="\static\styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{url_for('allRestaurants')}}">Restaurant App</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if 'username' not in session %}
+                        <li><a href="{{url_for('showLogin')}}">Log In</a></li>
+                    {% else %}
+                        <li><a href="{{url_for('disconnect')}}">Log Out</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <br><br>
+        <div class="page-header">
+            <h1>{{restaurant.name}}</h1>
+        </div>
+        <br>
+
+        {% with messages=get_flashed_messages() %}
+            {% if messages %}
+                <div id="flash_message">
+                    <ul>
+                        {% for message in messages %}
+                        <div class="alert alert-success" style="display:inline-block">
+                            <span class="glyphicon glyphicon-ok"></span><strong> {{message}}</strong>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="container">
+        {% if items %}
+            <div class="row">
+                {% for course in courses %}
+                    <h2>{{course}}s</h2>
+                    {% for i in items %}
+                        {% if i.course == course %}
+                            <div class="jumbotron" style="border-radius:0px;padding:40px">
+                                <div class="container-fluid">
+                                    {% if i.image %}
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-3 col-xs-12">
+                                                <img src="/static/images/{{i.image}}" style="width:150px;height:150px">
+                                            </div>
+                                            <div class="col-lg-10 col-sm-9 col-xs-12">
+                                    {% endif %}
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <p>{{i.name}}</p>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="pull-right">
+                                                        <p>{{i.price}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    {{i.description}}
+                                                </div>
+                                            </div>
+                                    {% if i.image %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% if not items %}
+            <p><b>There are currently no menu items for this restaurant</b></p>
+        {% endif %}
+    </div>
+    <script>
+        $(window).scroll(function(){
+            $("#flash_message").hide("slow");
+        });
+    </script>
+
+</body>
+</html>
