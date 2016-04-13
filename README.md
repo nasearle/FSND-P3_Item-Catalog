@@ -1,31 +1,29 @@
 ## Item Catalog
-This is a web application that enables users to create and customize	menu pages for multiple restaurants.
+This is a Flask web application that enables users to create and customize restaurant
+menu pages. Users can log in with Facebook or Google+ accounts to post, edit, and delete
+their own restaurants and menu items. Some of the languages and technologies used to
+create this app are Python, Flask, SQLAlchemy, SQL, Bootstrap, Oauth, JSON, Vagrant, 
+and VirtualBox.
 
 ### Included files:
-* fullstack-nanodegree-vm
-	* README.txt
-	* vagrant
-		* pg_config.sh and Vagrantfile - files necessary for Vagrant to work
-		* .vagrant - more necessary Vagrant stuff
-		* catalog - contains the relevant files of this	project
-			* database_setup.py - database model containing tables for restaurants and menu items
-			* lotsofmenus2.py - contains a bunch of example restaurants and menu items
-			* project.py - the project web server
-			* client_secrets.json - Google+ API info
-			* fb_client_secrets - Facebook API info
-			* static - images and css
-			* templates - HTML views
+* pg_config.sh and Vagrantfile - Vagrant configuration files
+* .vagrant - Vagrant vm files
+* database_setup.py - database models
+* lotsofmenus2.py - contains example restaurants and menu items
+* project.py - the project web server
+* client_secrets.json - Google+ API keys
+* fb_client_secrets - Facebook API keys
+* static - images and css
+* templates - HTML views
 
 ### Instructions:
-Fork the fullstack-nanodegree-vm repository so
-that you have a version within your GitHub account. Clone your
-version of the fullstack-nanodegree-vm repository to your
-local machine.
+This app requires [Vagrant](https://www.vagrantup.com/) and
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads) to run.
 
-Navigate to the catalog folder in the repository, open a
-GitBash there and enter the command $ vagrant up. When vagrant
-has finished starting up, enter the command $ vagrant ssh. Enter
-$ cd /vagrant and then $ cd catalog.
+Clone the FSND-P3_Item-Catalog repository to your local machine. Open a
+GitBash in the repository and enter the command $ vagrant up. When vagrant
+has finished starting up, enter the command $ vagrant ssh, and then
+$ cd /vagrant.
 
 To run the application, enter $ python project.py. The application
 will start at loaclhost:5000. Go to this address, or to
