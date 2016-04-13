@@ -1,9 +1,8 @@
 ## Item Catalog
-This is a Flask web application that enables users to create and customize restaurant
-menu pages. Users can log in with Facebook or Google+ accounts to post, edit, and delete
-their own restaurants and menu items. Some of the languages and technologies used to
-create this app are Python, Flask, SQLAlchemy, SQL, Bootstrap, Oauth, JSON, Vagrant, 
-and VirtualBox.
+This is a Flask web application for creating restaurant menu web pages. Users can log in 
+with Facebook or Google+ accounts to post, edit, and delete their own restaurants and menu 
+items. Some of the languages and technologies used to create this app are Python, Flask,
+SQLAlchemy, SQL, Bootstrap, Oauth, JSON, Vagrant, and VirtualBox.
 
 ### Included files:
 * pg_config.sh and Vagrantfile - Vagrant configuration files
