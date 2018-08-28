@@ -19,7 +19,7 @@ SQLAlchemy, SQL, Bootstrap, Oauth, JSON, Vagrant, and VirtualBox.
 This app requires [Vagrant](https://www.vagrantup.com/) and
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) to run.
 
-Clone the FSND-P3_Item-Catalog repository to your local machine. Open a
+Clone the FSND-P3_Item-Catalog repository. Open a
 GitBash in the repository and enter the command $ vagrant up. When vagrant
 has finished starting up, enter the command $ vagrant ssh, and then
 $ cd /vagrant.
