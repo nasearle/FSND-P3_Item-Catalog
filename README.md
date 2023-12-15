@@ -1,7 +1,7 @@
 ## Item Catalog
 This is a Flask web application for creating restaurant menu web pages. Users can log in 
 with Facebook or Google+ accounts to post, edit, and delete their own restaurants and menu 
-items. Some of the languages and technologies used to create this app are Python, Flask,
+items. Relevant tech: Python, Flask,
 SQLAlchemy, SQL, Bootstrap, Oauth, JSON, Vagrant, and VirtualBox.
 
 ### Included files:
@@ -25,14 +25,14 @@ has finished starting up, enter the command $ vagrant ssh, and then
 $ cd /vagrant.
 
 To run the application, enter $ python project.py. The application
-will start at loaclhost:5000. Go to this address, or to
+will start at localhost:5000. Go to this address, or to
 localhost:5000/restaurants, in a browser window to use the application.
-To stop the server and return to the vagrant command line press
-Ctrl+C (Command+C) in the GitBash window.
+To stop the server press
+Ctrl+C (Command+C) in the command line.
 
 ##### Using the Application:
-Logging in (button at the top right corner of the front page) with either
-a Google+ or Facebook account will allow you to create and edit Restaurants
+Log in using the button at the top right corner of the front page with either
+a Google+ or Facebook account to create and edit Restaurants
 and Menu Items. By default, the first account you log in with will be
 able to edit the sample restaurants and menu items. After this initial
 login, only the creator of a restaurant will be able to edit it.
